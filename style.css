@@ -1,0 +1,176 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo mais suave */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+header {
+    background: linear-gradient(135deg, #5c4d9d, #8a72d6); /* Gradiente de fundo */
+    color: white; /* Texto branco */
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s; /* Animação de entrada do cabeçalho */
+}
+
+nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 15px; /* Margem entre os itens */
+}
+
+nav a {
+    color: white; /* Cor do texto do link */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Cor de destaque ao passar o mouse */
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px; /* Espaçamento interno */
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Local para imagens */
+.imagem-ia {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    animation: slideIn 0.5s; /* Animação de entrada da imagem */
+}
+
+/* Cartões com sombra */
+.cartao {
+    background: white; /* Fundo branco */
+    margin: 15px; /* Margem */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.cartao:hover {
+    transform: translateY(-5px); /* Levanta o cartão ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+footer {
+    background: #5c4d9d; /* Cor de fundo do rodapé */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+    position: relative; /* Para efeito de elevação */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgb(0, 0, 0); /* Fundo preto */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% da parte superior e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    border-radius: 8px; /* Cantos arredondados */
+    animation: modalIn 0.5s ease; /* Animação de entrada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra do modal */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-20px); /* Move para cima */
+    }
+    to {
+        opacity: 1; /* Fica visível */
+        transform: translateY(0); /* Volta para a posição original */
+    }
+}
+
+/* Animação de slide-in */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateX(-100px); /* Move da esquerda */
+    }
+    to {
+        opacity: 1; /* Fica visível */
+        transform: translateX(0); /* Volta para a posição original */
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #4CAF50; /* Cor de fundo */
+    border: none;
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão ao passar o mouse */
+}
+
+/* Efeito de animação de entrada */
+.fade-in {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move para baixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Volta para a posição original */
+}
